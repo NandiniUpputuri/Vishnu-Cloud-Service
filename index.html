@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishnu Clouds</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</head>
+<body>
+<div class="main">
+    <nav class="navbar">
+        <div class="icon">
+            <h2 class="logo">ViShNu</h2>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT US</a></li>
+                <li><a href="#services">SERVICES</a></li>
+            </ul>
+        </div>
+
+        <div class="search">
+            <input class="srch" type="search" name="" placeholder="Type to search">
+            <button class="btn">Search</button>
+        </div>
+    </nav>
+
+    <div id="home" class="content">
+        <h1>Cloud Computing &<br> <span>Services</span></h1>
+        <p class="par">Discover seamless cloud computing solutions tailored to your business needs, <br>
+            enhancing productivity and innovation while optimizing costs.</p>
+
+        <div class="form" id="form-container">
+            <!-- Login Form -->
+            <div id="login-form">
+                <h2>Login Here</h2>
+                <div class="login-details">
+                    <input type="email" name="email" placeholder="Enter Email Here" required>
+                    <input type="password" name="password" placeholder="Enter Password" required>
+                </div>
+                <button class="btnn">Login</button>
+                <p class="link">Don't have an account?<br>
+                    <a href="#" id="signup-link">Sign Up Here</a></p>
+                <p class="liw">Log in with</p>
+                <div class="social-icons">
+                    <a href="#" onclick="socialLogin('Google')" class="social-icon"><ion-icon name="logo-google"></ion-icon></a>
+                    <a href="#" onclick="socialLogin('Facebook')" class="social-icon"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#" onclick="socialLogin('Twitter')" class="social-icon"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#" onclick="socialLogin('LinkedIn')" class="social-icon"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </div>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div id="signup-form" style="display: none;">
+                <h2>Sign Up Here</h2>
+                <div class="signup-details">
+                    <input type="text" name="name" placeholder="Enter Full Name" required>
+                    <input type="email" name="email" placeholder="Enter Email Here" required>
+                    <input type="text" name="phone" placeholder="Enter Phone Number" required>
+                    <input type="password" name="password" placeholder="Create Password" required>
+                </div>
+                <button class="btnn">Sign Up</button>
+                <p class="link">Already have an account?<br>
+                    <a href="#" id="login-link">Login Here</a></p>
+                <p class="liw">Sign up with</p>
+                <div class="social-icons">
+                    <a href="#" onclick="socialLogin('Google')" class="social-icon"><ion-icon name="logo-google"></ion-icon></a>
+                    <a href="#" onclick="socialLogin('Facebook')" class="social-icon"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#" onclick="socialLogin('Twitter')" class="social-icon"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#" onclick="socialLogin('LinkedIn')" class="social-icon"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="services" class="one">
+    <h2>Services</h2>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <h2 class="card-details">AWS</h2>
+                <p class="card-text">Explore Amazon Web Services for scalable cloud solutions.</p>
+                <button class="btn1" onclick="window.location.href='https://aws.amazon.com';">Click Here</button>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card">
+                <h2 class="card-details">Salesforce</h2>
+                <p class="card-text">Discover CRM services powered by Salesforce.</p>
+                <button class="btn1" onclick="window.location.href='https://www.salesforce.com';">Click Here</button>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card">
+                <h2 class="card-details">Azure</h2>
+                <p class="card-text">Leverage Microsoft Azure for cloud applications.</p>
+                <button class="btn1" onclick="window.location.href='https://azure.microsoft.com';">Click Here</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <p>We provide reliable cloud solutions that empower businesses to scale efficiently. Our expert team is dedicated to delivering high-quality services.</p>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: nandiniupputuri04@gmail.com | Phone: +91 9381446239</p>
+</section>
+
+<script>
+    // Toggle between Login and Signup forms
+    document.getElementById('signup-link').addEventListener('click', function () {
+        document.getElementById('login-form').style.display = 'none';
+        document.getElementById('signup-form').style.display = 'block';
+    });
+
+    document.getElementById('login-link').addEventListener('click', function () {
+        document.getElementById('signup-form').style.display = 'none';
+        document.getElementById('login-form').style.display = 'block';
+    });
+
+    // Mock social login
+    function socialLogin(platform) {
+        alert('Redirecting to ' + platform + ' login...');
+    }
+</script>
+</body>
+</html>
